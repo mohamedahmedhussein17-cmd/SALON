@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balance Wellness & Beauty Clinic</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#f8f6f3;
+color:#333;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:white;
+padding:20px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 15px rgba(0,0,0,.05);
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+font-size:32px;
+font-weight:700;
+}
+
+.logo span{
+display:block;
+font-size:14px;
+color:#b8aa99;
+font-family:Inter;
+}
+
+nav{
+display:flex;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#444;
+font-weight:500;
+}
+
+.menu-btn{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+padding:80px 5%;
+}
+
+.hero-text h1{
+font-family:'Playfair Display';
+font-size:72px;
+line-height:1.1;
+}
+
+.hero-text span{
+display:block;
+color:#b7a696;
+font-style:italic;
+}
+
+.hero-text p{
+margin-top:20px;
+font-size:18px;
+color:#666;
+line-height:1.7;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+background:#b7a696;
+color:white;
+padding:16px 40px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.hero img{
+width:100%;
+border-radius:30px;
+object-fit:cover;
+}
+
+/* ABOUT */
+
+.about{
+padding:100px 5%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+
+.about h2{
+font-family:'Playfair Display';
+font-size:50px;
+margin-bottom:20px;
+}
+
+.about p{
+line-height:1.8;
+color:#666;
+}
+
+.features{
+display:grid;
+gap:20px;
+}
+
+.feature{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+/* SERVICES */
+
+.services{
+padding:100px 5%;
+}
+
+.section-title{
+text-align:center;
+font-size:55px;
+font-family:'Playfair Display';
+margin-bottom:60px;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.05);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card h3{
+padding:20px;
+}
+
+/* TEAM */
+
+.team{
+padding:100px 5%;
+}
+
+.team-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.member{
+background:white;
+border-radius:25px;
+overflow:hidden;
+text-align:center;
+}
+
+.member img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.member h4{
+margin-top:15px;
+}
+
+.member p{
+padding-bottom:20px;
+color:#777;
+}
+
+/* BANNER */
+
+.banner{
+margin:100px 5%;
+border-radius:35px;
+overflow:hidden;
+background:url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80') center/cover;
+height:500px;
+display:flex;
+align-items:center;
+padding:60px;
+color:white;
+}
+
+.banner-content{
+max-width:500px;
+}
+
+.banner h2{
+font-size:70px;
+font-family:'Playfair Display';
+}
+
+/* REVIEWS */
+
+.reviews{
+padding:100px 5%;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.review{
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 10px 20px rgba(0,0,0,.05);
+}
+
+.stars{
+font-size:24px;
+margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+background:#b7a696;
+color:white;
+padding:60px;
+text-align:center;
+}
+
+footer h3{
+font-size:32px;
+margin-bottom:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.hero-text h1{
+font-size:48px;
+}
+
+.banner h2{
+font-size:45px;
+}
+
+nav{
+display:none;
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:white;
+padding:20px;
+flex-direction:column;
+}
+
+.menu-btn{
+display:block;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+Najma Salon Center
+<span>Beauty Wellness Center</span>
+</div>
+
+<nav id="nav">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#team">Team</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="menu-btn" id="menuBtn">☰</div>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h1>
+Beauty
+<span>& Wellness</span>
+</h1>
+
+<p>
+A complete beauty and wellness center designed to help you achieve confidence, rejuvenation and balance.
+</p>
+
+<a href="#" class="btn">Book Appointment</a>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80">
+
+</section>
+
+<section class="about" id="about">
+
+<div>
+
+<h2>Philosophy Of Excellence</h2>
+
+<p>
+We provide modern beauty treatments, wellness therapies and advanced skincare solutions tailored to every client.
+</p>
+
+<a href="#" class="btn">Learn More</a>
+
+</div>
+
+<div class="features">
+
+<div class="feature">✓ Certified Specialists</div>
+<div class="feature">✓ Modern Equipment</div>
+<div class="feature">✓ Personalized Programs</div>
+<div class="feature">✓ Premium Customer Care</div>
+
+</div>
+
+</section>
+
+<section class="services" id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="service-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80">
+<h3>Facial Treatments</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80">
+<h3>Yoga & Wellness</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80">
+<h3>Massage Therapy</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80">
+<h3>Cosmetology</h3>
+</div>
+
+</div>
+
+</section>
+
+<section class="team" id="team">
+
+<h2 class="section-title">Our Specialists</h2>
+
+<div class="team-grid">
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<h4>Najma</h4>
+<p>Cosmetologist</p>
+</div>
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/women/65.jpg">
+<h4>Sarah </h4>
+<p>Wellness Specialist</p>
+</div>
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/women/32.jpg">
+<h4>Hawa</h4>
+<p>Skin Expert</p>
+</div>
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/women/22.jpg">
+<h4>Asma</h4>
+<p>Nutrition Consultant</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="banner">
+
+<div class="banner-content">
+
+<h2>Your Beauty Code</h2>
+
+<p>
+Discover the perfect combination of wellness and beauty treatments.
+</p>
+
+<a href="#" class="btn">Book Now</a>
+
+</div>
+
+</section>
+
+<section class="reviews" id="reviews">
+
+<h2 class="section-title">Client Reviews</h2>
+
+<div class="review-grid">
+
+<div class="review">
+<div class="stars">★★★★★</div>
+Amazing service and professional staff.
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+Beautiful clinic with excellent treatments.
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+Highly recommended for wellness and skincare.
+</div>
+
+</div>
+
+</section>
+
+<footer id="contact">
+
+<h3>B-LAB Wellness Center</h3>
+
+<p>+252 61 000 0000</p>
+<p>info@blab.com</p>
+<p>Mogadishu, Somalia</p>
+
+</footer>
+
+<script>
+
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('nav');
+
+menuBtn.addEventListener('click',()=>{
+
+if(nav.style.display==="flex"){
+nav.style.display="none";
+}else{
+nav.style.display="flex";
+}
+
+});
+
+</script>
+
+</body>
+</html>
